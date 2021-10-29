@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Rules.h"
-#include "typedef.h"
+#include "def.h"
 #include "input_type_processing.h"
 
 int main() {

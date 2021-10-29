@@ -1,5 +1,5 @@
 #include "quadratic-equation.h"
-#include "typedef.h"
+#include "def.h"
 #include <iostream>
 #include <string>
 
