@@ -11,55 +11,55 @@ void input_type_processing ()
     str operation;
     int first_num, second_num;
     while (true) {
-        std::cin >> operation;
+        INPUT >> operation;
 
             if (operation == "sum") {
                 {
-                    std::cin >> first_num >> second_num;
-                    std::cout << " = " << first_num + second_num << std::endl;
+                    INPUT >> first_num >> second_num;
+                    CONSOLE_OUT << " = " << first_num + second_num << END_LINE;
                 }
             }
 
             else if (operation == "abs")
             {
-                std::cin >> first_num;
-                    std::cout << " = " << abs(first_num) << std::endl;
+                INPUT >> first_num;
+                CONSOLE_OUT << " = " << abs(first_num) << END_LINE;
             }
 
             if (operation == "sqrt")
             {
-                std::cin >> first_num;
-                    std::cout << " = " << sqrt(first_num) << std::endl;
+                INPUT >> first_num;
+                CONSOLE_OUT << " = " << sqrt(first_num) << END_LINE;
             }
 
             else if (operation == "pow")
             {
-                std::cin >> first_num >> second_num;
-                    std::cout << " = " << pow(first_num, second_num) << std::endl;
+                INPUT >> first_num >> second_num;
+                CONSOLE_OUT << " = " << pow(first_num, second_num) << END_LINE;
             }
 
             if (operation == "dif")
             {
-                std::cin >> first_num >> second_num;
-                    std::cout << " = " << first_num - second_num << std::endl;
+                INPUT >> first_num >> second_num;
+                CONSOLE_OUT << " = " << first_num - second_num << END_LINE;
             }
 
             else if (operation == "mul")
             {
-                std::cin >> first_num >> second_num;
-                    std::cout << " = " << first_num * second_num << std::endl;
+                INPUT >> first_num >> second_num;
+                CONSOLE_OUT << " = " << first_num * second_num << END_LINE;
             }
 
             if (operation == "div")
             {
-                std::cin >> first_num >> second_num;
-                    std::cout << " = " << first_num / second_num << std::endl;
+                INPUT >> first_num >> second_num;
+                CONSOLE_OUT << " = " << first_num / second_num << END_LINE;
             }
 
             else if (operation == "mod")
             {
-                std::cin >> first_num >> second_num;
-                    std::cout << " = " << first_num % second_num << std::endl;
+                INPUT >> first_num >> second_num;
+                CONSOLE_OUT << " = " << first_num % second_num << END_LINE;
             }
             if (operation == "/end")
             {

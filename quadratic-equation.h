@@ -1,4 +1,5 @@
 #include <math.h>
+#include "def.h"
 
 class quadratic_equation {
 public:
@@ -14,20 +15,20 @@ public:
     double one_crossing_x;
     void console_read()
     {
-        std::cout << "Enter coefficients in  your quadratic equation:" << std::endl;
-        std::cout << " a: ";
-        std::cin >> a;
-        std::cout << " b: ";
-        std::cin >> b;
-        std::cout << " c: ";
-        std::cin >> c;
-        std::cout << std::endl;
+        CONSOLE_OUT << "Enter coefficients in  your quadratic equation:" << END_LINE;
+        CONSOLE_OUT << " a: ";
+        INPUT >> a;
+        CONSOLE_OUT << " b: ";
+        INPUT >> b;
+        CONSOLE_OUT << " c: ";
+        INPUT >> c;
+        CONSOLE_OUT << END_LINE;
     }
 
     void discriminant_finding()
     {
         discriminant = (b * b) - (4 * a * c);
-        std::cout << "Discriminant is: " << discriminant << std::endl;
+        CONSOLE_OUT << "Discriminant is: " << discriminant << END_LINE;
     }
 
     void crossing_with_ox()
@@ -42,7 +43,7 @@ public:
         }
         else if ( discriminant < 0 )
         {
-            std::cout << "No crossing found" << std::endl;
+            CONSOLE_OUT << "No crossing found" << END_LINE;
             is_exist_x1 = false;
             is_exist_x2 = false;
             is_exist_x = false;
@@ -60,15 +61,15 @@ public:
     {
         if ( is_exist_x == false && is_exist_x1 == true && is_exist_x2 == true )
 
-            std::cout << "Your quadratic equation x1: " << first_crossing_x1 << std::endl;
+            CONSOLE_OUT << "Your quadratic equation x1: " << first_crossing_x1 << END_LINE;
 
         if ( is_exist_x == false && is_exist_x1 == true && is_exist_x2 == true )
 
-            std::cout << "Your quadratic equation x2: " << second_crossing_x2 << std::endl;
+            CONSOLE_OUT << "Your quadratic equation x2: " << second_crossing_x2 << END_LINE;
 
         if ( is_exist_x == true && is_exist_x1 == false && is_exist_x2 == false )
         {
-            std::cout << "Your quadratic equation x: " << one_crossing_x << std::endl;
+            CONSOLE_OUT << "Your quadratic equation x: " << one_crossing_x << END_LINE;
         }
     }
 };
